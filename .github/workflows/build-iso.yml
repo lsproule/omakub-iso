@@ -16,35 +16,36 @@ jobs:
           cd /build-iso
           pacman -Syu --noconfirm archiso
           cp -r /usr/share/archiso/configs/baseline archlive
-          cat <<EOF > archlive/packages.x86_64
-base
-cloud-init
-hyperv
-linux
-mkinitcpio
-mkinitcpio-archiso
-open-vm-tools
-openssh
-pv
-qemu-guest-agent
-syslinux
-virtualbox-guest-utils-nox
-nmap
-vim
-base-devel
-openssh
-git
-man-db
-man-pages
-lvm2
-mkinitcpio
-mkinitcpio-archiso
-mkinitcpio-nfs-utils
-nvme-cli
-nmap
-zsh
-wireless_tools
-wpa_supplicant
-tmux
-EOF
-          cat archlive/packages.x86_64
+          cat <<EOF > archlive/packages.x86_64 \
+          base \
+          cloud-init \
+          hyperv \
+          linux \
+          mkinitcpio \
+          mkinitcpio-archiso \
+          open-vm-tools \
+          openssh \
+          pv \
+          qemu-guest-agent \
+          syslinux \
+          virtualbox-guest-utils-nox \
+          nmap \
+          vim \
+          base-devel \
+          openssh \
+          git \
+          man-db \
+          man-pages \
+          lvm2 \
+          mkinitcpio \
+          mkinitcpio-archiso \
+          mkinitcpio-nfs-utils \
+          nvme-cli \
+          nmap \
+          zsh \
+          wireless_tools \
+          wpa_supplicant \
+          tmux \
+          EOF
+          cat archlive/packages.x86_64 
+
