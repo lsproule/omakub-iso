@@ -1,0 +1,15 @@
+name: build-iso
+on: 
+  schedule:
+    - cron: '0 9 * * *'
+  push:
+    branches: [ main ]
+jobs:
+  build-iso:
+    runs-on: ubuntu-latest
+    container:
+      image: archlinux
+    steps:
+      - name: install necessary packages
+        run: |
+          ls
