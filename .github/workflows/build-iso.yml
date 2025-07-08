@@ -11,11 +11,17 @@ jobs:
       image: archlinux
       options: --privileged
     steps:
-      - name: install necessary packages
+      - name: build iso 
         run: |
           mkdir /build-iso
           cd /build-iso
           pacman -Syu --noconfirm archiso grub git
           git clone https://github.com/lsproule/omakub-live.git omakub-live
-          mkarchiso -v -o out omakub-live
-          ls out
+          mkarchiso -o out omakub-live
+          ls out work
+      - name: upload isos 
+        uses: actions/upload-artifact@v4
+        with:
+          name: upload-isos 
+          path: |
+            /build-iso/out
