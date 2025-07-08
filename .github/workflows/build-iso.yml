@@ -47,7 +47,7 @@ jobs:
               wireless_tools \
               wpa_supplicant \
               tmux \
-            EOF \
+            EOF
           ) |  sed 's/ //g;s/\t//g' > archlive/packages.x86_64 
           cat archlive/packages.x86_64 
  
