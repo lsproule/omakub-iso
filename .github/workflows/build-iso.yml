@@ -4,6 +4,7 @@ on:
     - cron: '0 9 * * *'
   push:
     branches: [ main ]
+  workflow_dispatch:
 jobs:
   build-iso:
     runs-on: ubuntu-latest
